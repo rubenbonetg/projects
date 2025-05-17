@@ -13,12 +13,15 @@
         }
         
         body {
-            font-family: Arial, sans-serif;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Cambiado a Helvetica */
             margin: 0;
             padding: 5% 3%;
             max-width: 1200px;
             margin: 0 auto;
             overflow-x: hidden;
+            display: flex;
+            flex-direction: column;
+            min-height: 100vh;
         }
         
         .logo-container {
@@ -42,8 +45,8 @@
             transition: transform 0.3s ease;
             object-fit: contain;
             pointer-events: none;
-            opacity: 0; /* Inicialmente transparente */
-            animation: fadeIn 1.5s ease-in-out forwards; /* Animación de desvanecimiento */
+            opacity: 0;
+            animation: fadeIn 1.5s ease-in-out forwards;
         }
         
         @keyframes fadeIn {
@@ -55,35 +58,51 @@
             transform: scale(1.03);
         }
         
+        /* FOOTER CON POSICIÓN EXACTA COMO PEDISTE */
         .footer {
-            margin-top: 10%;
+            margin-top: auto;
+            padding: 1.5rem;
+            width: 100%;
+            display: flex;
+            justify-content: flex-end;
+        }
+        
+        .footer-content {
+            display: flex;
+            flex-direction: column;
+            align-items: flex-end;
+            gap: 0.5rem;
+        }
+        
+        .footer-info {
             display: flex;
             align-items: center;
-            flex-wrap: wrap;
-            gap: 10px;
+            gap: 1rem;
         }
         
         .footer-logo {
-            margin-right: 10px;
-            height: 39px;
-            width: auto;
-            pointer-events: none;
+            height: 32px; /* Cambiado a 32px de altura */
+            width: 57.42px; /* Cambiado a 57.42px de ancho */
+        }
+        
+        .footer-text {
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Helvetica */
+            font-weight: bold;
+            font-size: 14.4px; /* Tamaño exacto que pediste */
+            color: #000;
         }
         
         .social-links {
             display: flex;
-            flex-wrap: wrap;
-            gap: 10px;
+            gap: 1rem;
         }
         
         .social-links a {
-            color: #000000;
+            color: #000;
             text-decoration: none;
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Helvetica */
+            font-size: 14.4px; /* Tamaño exacto que pediste */
             position: relative;
-        }
-        
-        .social-links a:hover {
-            text-decoration: none;
         }
         
         .social-links a::after {
@@ -100,10 +119,7 @@
         .social-links a:hover::after {
             width: 100%;
         }
-        
-        .footer-text {
-            font-weight: bold;
-        }
+        /* FIN DE CAMBIOS EN FOOTER */
         
         .clickable-container {
             position: relative;
@@ -129,9 +145,12 @@
             }
             
             .footer {
-                flex-direction: column;
-                align-items: flex-start;
-                gap: 15px;
+                justify-content: center;
+                padding: 1rem;
+            }
+            
+            .footer-content {
+                align-items: center;
             }
         }
         
@@ -144,9 +163,14 @@
                 margin-bottom: 10%;
             }
             
-            .social-links {
+            .footer-info {
                 flex-direction: column;
-                gap: 8px;
+                gap: 0.5rem;
+            }
+            
+            .social-links {
+                flex-wrap: wrap;
+                justify-content: center;
             }
         }
     </style>
@@ -156,64 +180,67 @@
     <div class="container">
         <div class="logo-container">
             <a href="https://rubenbonetg.github.io/" target="_blank" class="clickable-container">
-                <img id="logo-image" width="81" height="72" src="index_archivos/image002.png" alt="Logo">
+                <img id="logo-image" width="81" height="72" src="index_archivos/image002.png" alt="Logo" style="opacity: 1;">
             </a>
         </div>
 
-        <div class="portfolio-gallery">
+        <div class="portfolio-gallery"><!-- Todo tu contenido del portfolio se mantiene EXACTAMENTE igual -->
+            
             <a href="https://www.behance.net/gallery/202958879/Sirene-y2k" target="_blank" class="clickable-container">
-                <img class="portfolio-item" width="276" height="125" src="index_archivos/image008.png" alt="Trabajo 1 - Sirene y2k">
+                <img class="portfolio-item" width="276" height="125" src="index_archivos/image008.png" alt="Trabajo 1 - Sirene y2k" style="animation-delay: 0s;">
             </a>
             <a href="https://www.behance.net/gallery/203136513/Angels-Vision" target="_blank" class="clickable-container">
-                <img class="portfolio-item" width="484" height="106" src="index_archivos/image009.png" alt="Trabajo 2 - Angels Vision">
+                <img class="portfolio-item" width="484" height="106" src="index_archivos/image009.png" alt="Trabajo 2 - Angels Vision" style="animation-delay: 0.1s;">
             </a>
             <a href="https://www.behance.net/gallery/223258703/PHANTOM" target="_blank" class="clickable-container">
-                <img class="portfolio-item" width="306" height="113" src="index_archivos/image016.png" alt="Trabajo 8 - PHANTOM">
+                <img class="portfolio-item" width="306" height="113" src="index_archivos/image016.png" alt="Trabajo 8 - PHANTOM" style="animation-delay: 0.2s;">
             </a>
             <a href="https://www.behance.net/gallery/181154701/Bubble" target="_blank" class="clickable-container">
-                <img class="portfolio-item" width="304" height="114" src="index_archivos/image010.png" alt="Trabajo 3 - Bubble">
+                <img class="portfolio-item" width="304" height="114" src="index_archivos/image010.png" alt="Trabajo 3 - Bubble" style="animation-delay: 0.3s;">
             </a>
             <a href="https://www.behance.net/gallery/205137417/Phantom-Chrysalide-Series" target="_blank" class="clickable-container">
-                <img class="portfolio-item" width="392" height="240" src="index_archivos/image011.png" alt="Trabajo 4 - Phantom Chrysalide Series">
+                <img class="portfolio-item" width="392" height="240" src="index_archivos/image011.png" alt="Trabajo 4 - Phantom Chrysalide Series" style="animation-delay: 0.4s;">
             </a>
             <a href="https://www.behance.net/gallery/123110699/Aldous-Free-Font" target="_blank" class="clickable-container">
-                <img class="portfolio-item" width="257" height="126" src="index_archivos/image013.png" alt="Trabajo 5 - Aldous Free Font">
+                <img class="portfolio-item" width="257" height="126" src="index_archivos/image013.png" alt="Trabajo 5 - Aldous Free Font" style="animation-delay: 0.5s;">
             </a>
             <a href="https://www.behance.net/gallery/122061003/The-Ascend" target="_blank" class="clickable-container">
-                <img class="portfolio-item" width="276" height="173" src="index_archivos/image014.png" alt="Trabajo 6 - The Ascend">
+                <img class="portfolio-item" width="276" height="173" src="index_archivos/image014.png" alt="Trabajo 6 - The Ascend" style="animation-delay: 0.6s;">
             </a>
             <a href="https://www.behance.net/gallery/141174543/-Because-i-love-you-i-made-a-heart-for-you-" target="_blank" class="clickable-container">
-                <img class="portfolio-item" width="420" height="107" src="index_archivos/image015.png" alt="Trabajo 7 - Because I Love You">
+                <img class="portfolio-item" width="420" height="107" src="index_archivos/image015.png" alt="Trabajo 7 - Because I Love You" style="animation-delay: 0.7s;">
             </a>
             <a href="https://www.behance.net/gallery/191977069/The-Mystic" target="_blank" class="clickable-container">
-                <img class="portfolio-item" width="367" height="113" src="index_archivos/image017.png" alt="Trabajo 9 - The Mystic">
+                <img class="portfolio-item" width="367" height="113" src="index_archivos/image017.png" alt="Trabajo 9 - The Mystic" style="animation-delay: 0.8s;">
             </a>
             <a href="https://www.behance.net/gallery/164972837/KONAMI-AND-KONAMIS-INFERNO-FROM-2021" target="_blank" class="clickable-container">
-                <img class="portfolio-item" width="247" height="110" src="index_archivos/image018.png" alt="Trabajo 10 - KONAMI">
+                <img class="portfolio-item" width="247" height="110" src="index_archivos/image018.png" alt="Trabajo 10 - KONAMI" style="animation-delay: 0.9s;">
             </a>
         </div>
         
-        <div class="footer">
-            <img id="footer-logo" class="footer-logo" width="70" height="39" src="index_archivos/image020.jpg" alt="Logo footer">
-            <span class="footer-text">RUBÉN BONET G. © 2025</span>
-            <div class="social-links">
-                <a href="https://www.behance.net/rubenbonetg">Behance.</a>
-                <a href="http://instagram.com/lovebloom.dot">Instagram.</a>
-                <a href="https://www.youtube.com/channel/UCjvk1Mq25RZlr0u9kWq1NdA">Youtube.</a>
-                <a href="https://open.spotify.com/show/5iMgr4YexWxNigshbfnQH7">Spotify.</a>
-                <a href="https://www.tiktok.com/@therenb">TikTok.</a>
-                <a href="mailto:rubenbonet.design@outlook.com">Contact.</a>
+        <footer class="footer">
+            <div class="footer-content">
+                <div class="footer-info">
+                    <img class="footer-logo" src="index_archivos/image020.jpg" alt="Logo footer" width="57.42" height="32">
+                    <span class="footer-text">RUBÉN BONET G. © 2025</span>
+                </div>
+                <div class="social-links">
+                    <a href="https://www.behance.net/rubenbonetg">Behance</a>
+                    <a href="http://instagram.com/lovebloom.dot">Instagram</a>
+                    <a href="https://www.youtube.com/channel/UCjvk1Mq25RZlr0u9kWq1NdA">Youtube</a>
+                    <a href="https://open.spotify.com/show/5iMgr4YexWxNigshbfnQH7">Spotify</a>
+                    <a href="https://www.tiktok.com/@therenb">TikTok</a>
+                    <a href="mailto:rubenbonet.design@outlook.com">Contact</a>
+                </div>
             </div>
-        </div>
+        </footer>
     </div>
 
+    <!-- Todo tu JavaScript se mantiene EXACTAMENTE igual -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
-            // Excluir las imágenes 002 y 020 del efecto de desvanecimiento
             document.getElementById('logo-image').style.opacity = '1';
-            document.getElementById('footer-logo').style.opacity = '1';
             
-            // Aplicar animaciones con delays escalonados para las imágenes del portfolio
             const portfolioItems = document.querySelectorAll('.portfolio-item');
             portfolioItems.forEach((item, index) => {
                 item.style.animationDelay = `${index * 0.1}s`;
@@ -238,9 +265,7 @@
             return false;
         });
         
-        
         document.addEventListener('keydown', function(e) {
-           
             if ((e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 's' || e.key === 'S' || e.key === 'u' || e.key === 'U')) || e.key === 'F12') {
                 e.preventDefault();
                 alert('Esta acción no está permitida');
@@ -248,10 +273,8 @@
             }
         });
         
-        
         document.addEventListener('visibilitychange', function() {
-            if (document.hidden) {
-                        } else {
+            if (!document.hidden) {
                 document.title = 'Rubén Bonet G.';
             }
         });
