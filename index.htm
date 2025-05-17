@@ -1,92 +1,160 @@
-<html><head></head><body><meta http-equiv="Content-Type" content="text/html; charset=utf-8">
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+<!DOCTYPE html>
+<html lang="es">
+<head>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Rubén Bonet G.</title>
     <style>
-        body {
-            font-family: Arial, sans-serif;
-            margin: 0;
-            padding: 20px;
-            padding: 5% 3%;
+        * {
             -webkit-user-select: none;
             -moz-user-select: none;
             -ms-user-select: none;
             user-select: none;
+            -webkit-touch-callout: none;
+            -webkit-tap-highlight-color: transparent;
+        }
+        
+        body {
+            font-family: Arial, sans-serif;
+            margin: 0;
+            padding: 5% 3%;
             max-width: 1200px;
             margin: 0 auto;
+            overflow-x: hidden;
         }
+        
         .logo-container {
             display: flex;
             align-items: center;
-            margin-bottom: 20px;
             margin-bottom: 5%;
             cursor: pointer;
         }
+        
         .portfolio-gallery {
-            display: flex;
-            flex-wrap: wrap;
             display: grid;
             grid-template-columns: repeat(auto-fill, minmax(280px, 1fr));
             gap: 20px;
-            margin-bottom: 40px;
             margin-bottom: 10%;
         }
+        
         .portfolio-item {
-            max-width: 100%;
             width: 100%;
             height: auto;
             cursor: pointer;
             transition: transform 0.3s ease;
-@@ -33,10 +36,11 @@
+            object-fit: contain;
+            pointer-events: none;
+        }
+        
+        .portfolio-item:hover {
             transform: scale(1.03);
         }
+        
         .footer {
-            margin-top: 40px;
             margin-top: 10%;
             display: flex;
             align-items: center;
             flex-wrap: wrap;
             gap: 10px;
         }
+        
         .footer-logo {
             margin-right: 10px;
-@@ -46,11 +50,13 @@
+            height: 39px;
+            width: auto;
+            pointer-events: none;
         }
+        
         .social-links {
-            margin-left: 10px;
             display: flex;
             flex-wrap: wrap;
             gap: 10px;
         }
+        
         .social-links a {
             color: #000000;
             text-decoration: none;
-            margin-right: 10px;
             position: relative;
         }
+        
         .social-links a:hover {
-@@ -69,99 +75,35 @@
-            pointer-events: none;
-            -webkit-user-drag: none;
-            -webkit-touch-callout: none;
-            max-width: 100%;
+            text-decoration: none;
         }
+        
+        .social-links a::after {
+            content: '';
+            position: absolute;
+            width: 0;
+            height: 1px;
+            bottom: 0;
+            left: 0;
+            background-color: #000;
+            transition: width 0.3s ease;
+        }
+        
+        .social-links a:hover::after {
+            width: 100%;
+        }
+        
+        .footer-text {
+            font-weight: bold;
+        }
+        
         .clickable-container {
             position: relative;
             display: inline-block;
+            width: 100%;
+        }
+        
+        img {
+            pointer-events: none;
+            -webkit-user-drag: none;
+            max-width: 100%;
+            height: auto;
+        }
+        
+        @media (max-width: 768px) {
+            body {
+                padding: 8% 5%;
+            }
+            
+            .portfolio-gallery {
+                grid-template-columns: 1fr;
+                gap: 15px;
+            }
+            
+            .footer {
+                flex-direction: column;
+                align-items: flex-start;
+                gap: 15px;
+            }
+        }
+        
+        @media (max-width: 480px) {
+            body {
+                padding: 10% 5%;
+            }
+            
+            .logo-container {
+                margin-bottom: 10%;
+            }
+            
+            .social-links {
+                flex-direction: column;
+                gap: 8px;
+            }
         }
     </style>
+</head>
 
-
-    
+<body>
     <div class="container">
-        
         <div class="logo-container">
             <a href="https://rubenbonetg.github.io/" target="_blank" class="clickable-container">
                 <img width="81" height="72" src="index_archivos/image002.png" alt="Logo">
             </a>
         </div>
 
-        
         <div class="portfolio-gallery">
             <a href="https://www.behance.net/gallery/202958879/Sirene-y2k" target="_blank" class="clickable-container">
                 <img class="portfolio-item" width="276" height="125" src="index_archivos/image008.png" alt="Trabajo 1 - Sirene y2k">
@@ -96,7 +164,8 @@
             </a>
             <a href="https://www.behance.net/gallery/223258703/PHANTOM" target="_blank" class="clickable-container">
                 <img class="portfolio-item" width="306" height="113" src="index_archivos/image016.png" alt="Trabajo 8 - PHANTOM">
-            </a><a href="https://www.behance.net/gallery/181154701/Bubble" target="_blank" class="clickable-container">
+            </a>
+            <a href="https://www.behance.net/gallery/181154701/Bubble" target="_blank" class="clickable-container">
                 <img class="portfolio-item" width="304" height="114" src="index_archivos/image010.png" alt="Trabajo 3 - Bubble">
             </a>
             <a href="https://www.behance.net/gallery/205137417/Phantom-Chrysalide-Series" target="_blank" class="clickable-container">
@@ -111,7 +180,6 @@
             <a href="https://www.behance.net/gallery/141174543/-Because-i-love-you-i-made-a-heart-for-you-" target="_blank" class="clickable-container">
                 <img class="portfolio-item" width="420" height="107" src="index_archivos/image015.png" alt="Trabajo 7 - Because I Love You">
             </a>
-            
             <a href="https://www.behance.net/gallery/191977069/The-Mystic" target="_blank" class="clickable-container">
                 <img class="portfolio-item" width="367" height="113" src="index_archivos/image017.png" alt="Trabajo 9 - The Mystic">
             </a>
@@ -119,6 +187,7 @@
                 <img class="portfolio-item" width="247" height="110" src="index_archivos/image018.png" alt="Trabajo 10 - KONAMI">
             </a>
         </div>
+        
         <div class="footer">
             <img class="footer-logo" width="70" height="39" src="index_archivos/image020.jpg" alt="Logo footer">
             <span class="footer-text">RUBÉN BONET G. © 2025</span>
@@ -133,30 +202,43 @@
         </div>
     </div>
 
-<script>
-    // Deshabilitar el menú contextual (clic derecho)
-    document.addEventListener('contextmenu', function(e) {
-        e.preventDefault();
-        return false;
-    });
-
-    // Deshabilitar el arrastre de imágenes
-    document.addEventListener('dragstart', function(e) {
-        e.preventDefault();
-        return false;
-    });
-
-    // Deshabilitar la selección de texto
-    document.addEventListener('selectstart', function(e) {
-        e.preventDefault();
-        return false;
-    });
-    
-    // Deshabilitar el atajo de copiar (Ctrl+C)
-    document.addEventListener('keydown', function(e) {
-        if ((e.ctrlKey || e.metaKey) && (e.key === 'c' || e.key === 'C' || e.keyCode === 67)) {
+    <script>
+        document.addEventListener('contextmenu', function(e) {
+            e.preventDefault();
+            alert('Esta acción no está permitida');
+            return false;
+        });
+        
+        document.addEventListener('dragstart', function(e) {
+            if (e.target.tagName === 'IMG') {
+                e.preventDefault();
+                return false;
+            }
+        });
+        
+        document.addEventListener('selectstart', function(e) {
             e.preventDefault();
             return false;
-        }
-    });
-</script></body></html>
+        });
+        
+        
+        document.addEventListener('keydown', function(e) {
+           
+            if ((e.ctrlKey && (e.key === 'c' || e.key === 'C' || e.key === 'x' || e.key === 'X' || e.key === 's' || e.key === 'S' || e.key === 'u' || e.key === 'U')) || e.key === 'F12') {
+                e.preventDefault();
+                alert('Esta acción no está permitida');
+                return false;
+            }
+        });
+        
+        
+        document.addEventListener('visibilitychange', function() {
+            if (document.hidden) {
+                document.title = 'Por favor, vuelve a la página';
+            } else {
+                document.title = 'Rubén Bonet G.';
+            }
+        });
+    </script>
+</body>
+</html>
