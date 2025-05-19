@@ -1,5 +1,5 @@
 <html lang="es"><head>
-     <link rel="icon" href="index_archivos/r.ico"" type="image/x-icon">
+     <link rel="icon" href="index_archivos/r.ico" "="" type="image/x-icon">
     <meta http-equiv="Content-Type" content="text/html; charset=utf-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0, maximum-scale=1.0, user-scalable=no">
     <title>Rubén Bonet G.</title>
@@ -14,15 +14,21 @@
         }
         
         body {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Cambiado a Helvetica */
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             margin: 0;
-            padding: 5% 3%;
+            padding: 5% 3% 0; /* CAMBIO: padding reducido abajo para el footer */
             max-width: 1200px;
             margin: 0 auto;
             overflow-x: hidden;
             display: flex;
             flex-direction: column;
-            min-height: 100vh;
+            min-height: 100vh; /* Ocupa toda la pantalla */
+        }
+        
+        /* CONTENEDOR PRINCIPAL AJUSTADO */
+        .container {
+            flex-grow: 1; /* Empuja el footer hacia abajo */
+            width: 100%;
         }
         
         .logo-container {
@@ -59,9 +65,9 @@
             transform: scale(1.03);
         }
         
-        /* FOOTER CON POSICIÓN EXACTA COMO PEDISTE */
+        /* FOOTER - COMPORTAMIENTO IDÉNTICO AL PRIMER CÓDIGO */
         .footer {
-            margin-top: auto;
+            margin-top: auto; /* Se pega al fondo */
             padding: 1.5rem;
             width: 100%;
             display: flex;
@@ -82,14 +88,14 @@
         }
         
         .footer-logo {
-            height: 32px; /* Cambiado a 32px de altura */
-            width: 57.42px; /* Cambiado a 57.42px de ancho */
+            height: 32px;
+            width: 57.42px;
         }
         
         .footer-text {
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Helvetica */
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
             font-weight: bold;
-            font-size: 14.4px; /* Tamaño exacto que pediste */
+            font-size: 14.4px;
             color: #000;
         }
         
@@ -101,8 +107,8 @@
         .social-links a {
             color: #000;
             text-decoration: none;
-            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif; /* Helvetica */
-            font-size: 14.4px; /* Tamaño exacto que pediste */
+            font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+            font-size: 14.4px;
             position: relative;
         }
         
@@ -120,7 +126,6 @@
         .social-links a:hover::after {
             width: 100%;
         }
-        /* FIN DE CAMBIOS EN FOOTER */
         
         .clickable-container {
             position: relative;
@@ -137,7 +142,7 @@
         
         @media (max-width: 768px) {
             body {
-                padding: 8% 5%;
+                padding: 8% 5% 0; /* Ajuste responsive */
             }
             
             .portfolio-gallery {
@@ -157,7 +162,7 @@
         
         @media (max-width: 480px) {
             body {
-                padding: 10% 5%;
+                padding: 10% 5% 0; /* Ajuste responsive */
             }
             
             .logo-container {
@@ -185,8 +190,7 @@
             </a>
         </div>
 
-        <div class="portfolio-gallery"><!-- Todo tu contenido del portfolio se mantiene EXACTAMENTE igual -->
-            
+        <div class="portfolio-gallery">
             <a href="https://www.behance.net/gallery/202958879/Sirene-y2k" target="_blank" class="clickable-container">
                 <img class="portfolio-item" width="276" height="125" src="index_archivos/image008.png" alt="Trabajo 1 - Sirene y2k" style="animation-delay: 0s;">
             </a>
@@ -237,7 +241,6 @@
         </footer>
     </div>
 
-    <!-- Todo tu JavaScript se mantiene EXACTAMENTE igual -->
     <script>
         document.addEventListener('DOMContentLoaded', function() {
             document.getElementById('logo-image').style.opacity = '1';
@@ -280,4 +283,5 @@
             }
         });
     </script>
+
 </body></html>
